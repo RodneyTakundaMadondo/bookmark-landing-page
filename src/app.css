@@ -1,55 +1,208 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+/* @use postcss */
 
-:root{
+:root {
     --soft-blue: hsl(231, 69%, 60%);
     --soft-red: hsl(0, 94%, 66%);
     --greyish-blue: hsl(229, 8%, 60%);
     --very-dark-blue: hsl(229, 31%, 21%);
 }
 
+@theme {
+    --breakpoint-mobile: 20rem;
+}
+
+/* 
+bring money for takealot R294
+*/
 @layer base {
     body {
         font-family: "Rubik", serif;
     }
-    .button-li button:hover{
+
+    .button-li button:hover {
         cursor: pointer;
     }
 
-        .nav-links > ul>li:not(.button-li)::after,
-        .nav-links>ul>li:first-child::before{
-            content: '';
-            display:block;
-            margin-inline: auto;
-            width: 90%;
-            background-color: var(--greyish-blue);
-            height: 1px;
-            margin-block:0.5rem;
-        }
-        .nav-links ul>li:hover{
-            cursor: pointer;
+    .nav-links ul li a {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links>ul>li::after,
+    .nav-links>ul>li:first-child::before {
+        content: '';
+        display: block;
+        margin-inline: auto;
+        width: 90%;
+        background-color: var(--greyish-blue);
+        height: 1px;
+        margin-block: 0.5rem;
+    }
+
+    .nav-links ul>li a:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+        
+    }
+
+    @media(width>=768px) {
+
+        .nav-links>ul>li::after,
+        .nav-links>ul>li:first-child::before {
+            display: none;
         }
 
-        .tab-links>ul>li::after,
-        .tab-links>ul:first-child::before{
+        .nav-links>ul li a {
+            @apply text-black tracking-widest text-sm;
+        }
+        .button-li button{
+            @apply tracking-widest;
+        }
+
+    }
+
+    .tab-links>ul::before {
+        content: '';
+        display: block;
+        margin-inline: auto;
+        width: 90%;
+        background-color: var(--greyish-blue);
+        height: 1px;
+        margin-block: 0.5rem;
+    }
+    /* this is the grey line under the links */
+    .tab-links>ul>li::after{
+        content:'';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background: var(--greyish-blue);
+        height: 1px;
+        width: 90%;
+        left:0;
+        right:0;
+        margin: auto;
+    }
+
+    .tab-links>ul>li{
+        color:var(--greyish-blue);
+        position: relative;
+    }
+    .tab-links>ul>li:hover{
+        position: relative;
+        color: var(--very-dark-blue);
+        
+    }
+    .tab-links >ul li:hover::before{
+        content:'';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background: var(--soft-red);
+        height: 3px;
+        width: 50%;
+        left:0;
+        right:0;
+        margin: auto;
+    }
+    
+
+    @media (width>=768px) {
+        /* removing the before element  */
+        .tab-links >ul li:hover::before{
+            display: none;
+        }
+        .tab-links>ul:first-child::before {
             content: '';
-            display:block;
-            margin-inline: auto;
-            width: 90%;
-            background-color: var(--greyish-blue);
-            height: 1px;
-            margin-block:0.5rem;
+            display: none;
         }
-        @media (width>=768px){
-            .tab-links>ul:first-child::before{
-                content: '';
-                display: none;
-            }
+
+        .tab-links>ul>li:after{
+            display: none;
+            margin-block: 0;
         }
+
+        .tab-links ul::after {
+            content: '';
+            @apply block absolute bottom-0 h-[1px] w-full bg-[var(--greyish-blue)] opacity-20;
+        }
+        
         .tab-links>ul>li:hover{
-            cursor: pointer;
+            position: relative;
+            color: var(--very-dark-blue);
         }
-       
+        .tab-links>ul>li:hover::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom:0;
+            width: 105%;
+            background-color: red;
+            height: 2px;
+        }
+        .tab-links>ul>li.active::after {
+            content:'';
+            display: block;
+            position: absolute;
+            bottom:0;
+            width: 105%;
+            background-color: red;
+            height: 2px;
+        }
+        
+    }
+/* 
+make li take up full height of the container
+make after hover element sit at the bottom of its parent
+fix login button at mobile
+*/
+  
+
+    .tab-links>ul>li button:hover {
+        cursor: pointer;
+    }
+
+    .extension-container {
+        @apply flex flex-col items-center gap-4 w-[min(calc(100%-2rem),15rem)] mx-auto py-4;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px -5rem rgba(0, 0, 0, 0.19);
+    }
+
+    .logo-container {
+        @apply h-[4rem] w-[4rem]
+    }
+
+    .faq-links li {
+        @apply mb-8 cursor-pointer;
+    }
+
+    .faq-links:first-child::before,
+    .faq-links li::after {
+        content: '';
+        display: block;
+        margin-inline: auto;
+        width: 100%;
+        background-color: var(--greyish-blue);
+        height: 1px;
+    }
+
+    .faq-links li::after {
+        @apply my-4 md:my-2;
+    }
+
+    .faq-links:first-child::before {
+        margin-bottom: 1rem;
+        display: none;
+    }
+
+
+    .foot-links li {
+        @apply my-2 md:my-0 uppercase tracking-widest;
+    }
+
+    .foot-links li a {
+        @apply text-sm;
+    }
 
     .attribution {
         font-size: 11px;
@@ -58,5 +211,64 @@
 
     .attribution a {
         color: hsl(228, 45%, 44%);
+    }
+
+    .article-container{
+        @apply max-h-60 overflow-hidden max-h-60 invisible h-0 opacity-0 ;
+        transition: opacity 0.3s ease-out, height 0.3s ease-out, visibility 0s ease-out 0.3s ;       
+    }
+    
+    .open .article-container{
+        @apply h-auto visible opacity-100; 
+    }
+    .toggle-close{
+        display: none !important;
+    }
+    .open .toggle-close{
+        display: inline !important;
+    }
+    .open .toggle-open{
+        display: none !important;
+    }
+    .faqs{
+        @apply flex justify-between ;
+    }
+    .arti-para{
+        @apply my-4 text-[var(--greyish-blue)];
+
+    }
+    .qes{
+        @apply hover:text-[var(--soft-red)]
+    }
+    .blue-btn{
+        @apply bg-[var(--soft-blue)] shadow-xl text-white py-2 px-4 rounded-md hover:bg-white hover:text-[var(--soft-blue)] border-solid border-transparent border-2 transition-all duration-300 ease-in-out hover:border-solid hover:border-2 hover:border-[var(--soft-blue)] hover:cursor-pointer;
+    }
+
+    .content{
+        display: none !important;
+    }
+
+    .content.active{
+        display: flex !important;
+    }
+    .foot-links li a{
+        color:white;
+        transition: color 0.3s ease-in-out;
+    }
+    .foot-links li a:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+        
+    }
+    .social-links a {
+        cursor: pointer;
+        color: white;
+        transition: color 0.2s ease-in-out;
+        
+    }
+    .social-links a:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+        
     }
 }

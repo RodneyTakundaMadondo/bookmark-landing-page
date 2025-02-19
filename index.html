@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon-32x32.png">
   <link rel="stylesheet" href="/src/app.css">
+  <script src="https://kit.fontawesome.com/6e32b16951.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <title>Frontend Mentor | Bookmark landing page</title>
 </head>
 
 <body>
-  <header class="relative">
-    <nav class=" nav-bar py-4   w-full transition-[all] ease-in duration-300 ">
-      <div
-        class="flex justify-between min-w-[190px] w-[min(calc(100%-1rem),50rem)] mx-auto min-[320px]:w-[min(calc(100%-2rem),50rem)] mb-8">
 
-        <div class="w-[0rem] ">
+  <header class="relative">
+    <!-- md:justify-between md:w-[min(100%,70rem)] -->
+    <nav
+      class=" nav-bar py-4 md:px-4   lg:pl-24 lg:pr-44 md:justify-between  w-full transition-[all] ease-in duration-300 md:flex md:items-center  md:mx-auto  ">
+      <div
+        class="flex md:block  justify-between min-w-[190px] w-[min(calc(100%-1rem),50rem)] mx-auto md:mx-0 min-[320px]:w-[min(calc(100%-2rem),50rem)] md:w-[min(calc(100%-2rem),10rem)] mb-8 md:mb-0">
+
+        <div>
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
-              <path
+              <path class="target-svg"
                 d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
                 fill="#242A45" fill-rule="nonzero" />
               <g>
@@ -31,28 +34,41 @@
           </svg>
         </div>
 
-
-       <div>
-        <button class="menu-toggle">
-          <img src="./src/images/icon-hamburger.svg" alt="Open Menu">
-        </button>
-        <button class="close-menu hidden">
-          <img src="./src/images/icon-close.svg" alt="Close">
-        </button>
-       </div>
-       
+        <div class="md:hidden">
+          <button class="menu-toggle">
+            <img src="./src/images/icon-hamburger.svg" alt="Open Menu">
+          </button>
+          <button class="close-menu hidden">
+            <img src="./src/images/icon-close.svg" alt="Close">
+          </button>
+        </div>
       </div>
-      <div class="nav-links hidden ">
-        <ul class="uppercase text-center text-[var(--greyish-blue)]">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Contact</li>
-          <li class="button-li p-4">
-            <button
-              class="uppercase border-solid border-2 border-white text-white rounded-md w-full py-1">Login</button>
+
+      <div class="nav-links hidden   md:flex md:gap-12 ">
+        <ul
+          class="uppercase md:min-w-[20rem]  text-center text-[var(--greyish-blue)] md:flex md:justify-between md:items-center">
+          <li>
+            <a href="#">
+              Features
+            </a>
           </li>
+          <li>
+            <a href="#">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Contact
+            </a>
+          </li>
+
         </ul>
-        <div class="mt-[10rem] flex justify-center gap-8 items-center">
+        <div class="button-li max-w-[90%] mx-auto">
+          <button
+            class="uppercase border-solid border-2 md:border-transparent text-white rounded-md w-full py-1 md:px-4 md:py-2 md:bg-[var(--soft-red)] md:text-xs md:hover:bg-white md:hover:text-[var(--soft-red)] md:hover:border-[var(--soft-red)] transition duration-300 ease-in-out">Login</button>
+        </div>
+        <div class="mt-[10rem] md:hidden flex justify-center gap-8 items-center">
           <a href="#">
             <img src="./src/images/icon-facebook.svg" alt="facebook">
           </a>
@@ -63,35 +79,42 @@
       </div>
 
     </nav>
-
   </header>
-  
-  <main class="main-content">
-    <section class="flex flex-col justify-center md:flex-row md:justify-between ">
-      <div class="relative mb-8 max-w-[400px] md:order-10  ml-auto">
-        <img class="w-full h-auto" src="./src/images/illustration-hero.svg" alt="tablet">
-        <div class="absolute top-[20%] right-0 -z-10  h-[85%] w-[80%] rounded-tl-[30%] rounded-bl-[30%] bg-[var(--soft-blue)]"></div>
+
+  <main class="main-content md:mt-16 ">
+    <section class=" lg:pl-24 flex flex-col justify-center md:flex-row md:justify-around">
+      <div class="relative mb-8 md:mb-0  md:order-10  ml-auto  md:w-[35rem]">
+        <div class="max-w-[400px]">
+          <img class="w-full h-auto" src="./src/images/illustration-hero.svg" alt="tablet">
+        </div>
+        <div
+          class="absolute top-[20%] right-0 -z-10  h-[85%] w-[80%]  rounded-tl-[30%] rounded-bl-[30%] bg-[var(--soft-blue)]">
+        </div>
       </div>
 
-      <div class="w-[min(calc(100%-1rem),30rem)] mx-auto ">
-        <h1 class="text-center md:text-start font-bold text-lg text-[var(--very-dark-blue)]">A Simple Bookmark Manager</h1>
-        <p class="text-center md:text-start text-[var(--greyish-blue)]">
+      <div class="relative top-5 w-[min(calc(100%-1rem),30rem)]   flex flex-col justify-evenly mx-auto md:mx-0 md:pl-4">
+        <h1 class="text-center md:text-start font-medium text-lg text-[var(--very-dark-blue)] md:text-3xl lg:text-4xl">A Simple
+          Bookmark Manager
+        </h1>
+        <p class="text-center md:text-start text-[var(--greyish-blue)] max-w-[30rem]">
           A clean and simple interface to organize
           your favourite websites. Open a new
           browser tab and see your sites load
           instantly. Try it for free.
         </p>
-        <div class="button-group flex mt-8  gap-4 justify-center md:justify-start flex-wrap">
-          <button class="bg-[var(--soft-blue)] shadow-md text-white py-2 px-4 rounded-md">Get it on Chrome</button>
-          <button class=" shadow-xl  py-2 px-4 rounded-md ">Get it on FireFox</button>
+        <div class="button-group flex mt-8 md:mt-0  gap-4 justify-center md:justify-start flex-wrap">
+          <a href="#" class="blue-btn">Get it on Chrome</a>
+          <a href="#"
+            class=" bg-[#f7f7f7] shadow-xl  py-2 px-4 rounded-md hover:bg-white  border-solid border-transparent border-2 transition-all duration-300 ease-in-out hover:border-solid hover:border-2 hover:border-black hover:cursor-pointer">Get
+            it on FireFox</a>
         </div>
       </div>
     </section>
 
     <!-- features section -->
-    <section class="mt-16">
-      <div class="text-center flex flex-col gap-4 mb-8 w-[min(calc(100%-1rem),29.5rem)] mx-auto">
-        <h2 class="text-[var(--very-dark-blue)] font-bold text-xl ">Features</h2>
+    <section class="mt-18">
+      <div class=" feature-container text-center flex flex-col gap-4 mb-8 w-[min(calc(100%-1rem),29.5rem)] mx-auto">
+        <h2 class="text-[var(--very-dark-blue)] font-bold text-xl md:text-2xl lg:text-3xl ">Features</h2>
         <p class="text-[var(--greyish-blue)]">
           Our aim is to make it quick and easy for you
           to access your favourite websites. Your
@@ -99,23 +122,36 @@
           you can access them on the go.
         </p>
       </div>
-      <div class=" tab-links md:flex mb-8">
-        <ul class="flex flex-col md:flex-row md:gap-16 text-center md:text-start w-[min(calc(100%-1rem),29.5rem)] mx-auto md:w-auto">
-          <li class="">Simple Bookmarking</li>
-          <li>Speedy Searching</li>
-          <li>Easy Sharing</li>
+      <div class=" tab-links md:flex mb-8  ">
+        <ul
+          class="feature pb-4 md:pb-0 relative flex flex-col md:flex-row md:gap-16 text-center md:text-start w-[min(calc(100%-1rem),29.5rem)] mx-auto md:w-auto">
+          <li data-id="bookmark" class="pb-4 tab-btn active  ">
+            Simple Bookmarking
+          </li>
+          <li data-id="intelligent" class="pb-4 tab-btn">
+            Speedy Searching
+          </li>
+          <li data-id="share" class="pb-4 tab-btn">
+            Easy Sharing
+          </li>
         </ul>
       </div>
-      <div class="flex flex-col md:flex-row gap-8">
-        <div class="md:-order-10 relative mb-8 max-w-[400px]   mr-auto ">
-          <div class="w-[80%]">
-            <img class="ml-4 w-full h-auto block" src="./src/images/illustration-features-tab-1.svg" alt="tablet">
+
+      <div class="flex flex-col md:flex-row gap-8 content active" id="bookmark">
+        <div class="relative mb-8 md:mb-0  md:-order-10  py-12 md:max-w-[500px] grow">
+
+          <div class=" mx-auto max-w-56 sm:max-w-80 md:max-w-80">
+            <img class="w-full h-auto " src="./src/images/illustration-features-tab-1.svg" alt="tablet">
           </div>
-          <div class="absolute top-[20%] left-0 -z-10  h-[95%] w-[80%] rounded-tr-[30%] rounded-br-[30%] bg-[var(--soft-blue)]"></div>
+
+          <div
+            class="absolute p-4 bottom-0 h-[10rem] md:h-[13.5rem] w-[65%] md:w-[70%] left-0 -z-10    rounded-tr-[10rem] rounded-br-[10rem] bg-[var(--soft-blue)]">
+          </div>
         </div>
 
-        <div class="w-[min(calc(100%-1rem),25rem)] mx-auto text-center">
-          <h2 class="font-bold text-center text-[var(--very-dark-blue)] mb-4">
+
+        <div class="w-[min(calc(100%-1rem),25rem)] my-auto mx-auto text-center md:text-start flex flex-col gap-4">
+          <h2 class="font-bold text-center md:text-start text-[var(--very-dark-blue)]  text-lg sm:text-xl md:text-2xl">
             Bookmark in one click
           </h2>
           <p class="text-[var(--greyish-blue)]">
@@ -124,66 +160,292 @@
             you complete control over how you manage
             your favorite sites.
           </p>
+          <button class="blue-btn max-w-44 mx-auto md:mx-0">More Info</button>
         </div>
       </div>
+
+      <div class="flex flex-col md:flex-row gap-8 content" id="intelligent">
+        <div class="relative mb-8 md:mb-0  md:-order-10  py-12 md:max-w-[500px] grow">
+
+          <div class=" mx-auto max-w-56 sm:max-w-80 md:max-w-80">
+            <img class="w-full h-auto " src="./src/images/illustration-features-tab-2.svg" alt="tablet">
+          </div>
+
+          <div
+            class="absolute p-4 bottom-0 h-[10rem] md:h-[13.5rem] w-[65%] md:w-[70%] left-0 -z-10    rounded-tr-[10rem] rounded-br-[10rem] bg-[var(--soft-blue)]">
+          </div>
+        </div>
+
+
+        <div class="w-[min(calc(100%-1rem),25rem)] my-auto mx-auto text-center md:text-start flex flex-col gap-4">
+          <h2 class="font-bold text-center md:text-start text-[var(--very-dark-blue)]  text-lg sm:text-xl md:text-2xl">
+            Intelligent search
+          </h2>
+          <p class="text-[var(--greyish-blue)]">
+            Our powerful search feature will help you find
+            saved sites in no time at all.
+            No need to trawl through all
+            of your bookmarks.
+          </p>
+          <button class="blue-btn max-w-44">More Info</button>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 content" id="share">
+        <div class="relative mb-8 md:mb-0  md:-order-10  py-12 md:max-w-[500px] grow">
+
+          <div class=" mx-auto max-w-56 sm:max-w-80 md:max-w-80">
+            <img class="w-full h-auto " src="./src/images/illustration-features-tab-3.svg" alt="tablet">
+          </div>
+
+          <div
+            class="absolute p-4 bottom-0 h-[10rem] md:h-[13.5rem] w-[65%] md:w-[70%] left-0 -z-10    rounded-tr-[10rem] rounded-br-[10rem] bg-[var(--soft-blue)]">
+          </div>
+        </div>
+
+
+        <div class="w-[min(calc(100%-1rem),25rem)] my-auto mx-auto text-center md:text-start flex flex-col gap-4">
+          <h2 class="font-bold text-center md:text-start text-[var(--very-dark-blue)]  text-lg sm:text-xl md:text-2xl">
+            Share your bookmarks
+          </h2>
+          <p class="text-[var(--greyish-blue)]">
+            Easily share your bookmarks and collections
+            with others. Create a shareable
+            link that you can send at the click of a button.
+          </p>
+        </div>
+        <button class="blue-btn max-w-44">More Info</button>
+      </div>
+
     </section>
-    
+
     <!-- Download Extension Section -->
-     <section class="mt-16">
+    <section class="mt-18 pb-16">
       <div class="mb-8 text-center w-[min(calc(100%-1rem),30rem)] mx-auto">
-        <h2 class="text-[var(--very-dark-blue)] font-bold mb-4">Download the extension</h2>
+        <h2 class="text-[var(--very-dark-blue)] font-bold mb-4 text-lg sm:text-xl md:text-2xl">Download the extension</h2>
         <p class="text-[var(--greyish-blue)]">
           We’ve got more browsers in the pipeline.
           Please do let us know if you’ve got a
           favourite you’d like us to prioritize.
         </p>
       </div>
-      <div class="flex flex-col gap-8">
-        <div>
-          <div>
+      <div class="flex flex-col gap-8 md:flex-row md:pb-20 md:w-[min(calc(100%-1rem),50rem)] md:mx-auto  ">
+        <div class="extension-container rounded-md ">
+          <div class="logo-container">
             <img src="./src/images/logo-chrome.svg" alt="Chrome">
           </div>
-          <h3></h3>
-          <p></p>
-          <div>
-            <img src="./src/images/bg-dots.svg" alt="">
+          <div class="text-center">
+            <h3 class="text-[var(--very-dark-blue)] font-bold">Add to Chrome</h3>
+            <p class="text-[var(--greyish-blue)] text-[0.85rem]">Minimum version 62</p>
           </div>
-          <div>Add & Install Extension</div>
-        </div>
-        <div>
           <div>
+            <img src="./src/images/bg-dots.svg" alt="dots.......">
+          </div>
+          <button class="blue-btn text-sm  ">Add
+            & Install Extension</button>
+        </div>
+
+        <div class="extension-container rounded-md relative top-10  ">
+          <div class="logo-container">
             <img src="./src/images/logo-firefox.svg" alt="">
           </div>
-          <h3></h3>
-          <p></p>
-          <div>
-            <img src="./src/images/bg-dots.svg" alt="">
+          <div class="text-center">
+            <h3 class="text-[var(--very-dark-blue)] font-bold">Add to FireFox</h3>
+            <p class="text-[var(--greyish-blue)] text-[0.85rem]">Minimum version 55</p>
           </div>
-          <div>Add & Install Extension</div>
-        </div>
-        <div>
           <div>
+            <img src="./src/images/bg-dots.svg" alt="dots.......">
+          </div>
+          <button class="blue-btn text-sm   ">Add
+            & Install Extension</button>
+        </div>
+
+        <div class="extension-container rounded-md relative top-20 ">
+          <div class="logo-container">
             <img src="./src/images/logo-opera.svg" alt="">
           </div>
-          <h3></h3>
-          <p></p>
-          <div>
-            <img src="./src/images/bg-dots.svg" alt="">
+          <div class="text-center">
+            <h3 class="text-[var(--very-dark-blue)] font-bold">Add to Opera</h3>
+            <p class="text-[var(--greyish-blue)] text-[0.85rem]">Minimum version 46</p>
           </div>
-          <div>Add & Install Extension</div>
+          <div>
+            <img src="./src/images/bg-dots.svg" alt="dots.......">
+          </div>
+          <button class="blue-btn text-sm  ">Add
+            & Install Extension</button>
         </div>
       </div>
-     </section>
-  </main>
-  <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
-  <script type="module" src="./src/main.js">
+    </section>
 
-  </script>
+    <!-- FAQ section -->
+    <section class="mt-18">
+      <div class="flex flex-col text-center w-[min(calc(100%-1rem),30rem)] mx-auto mb-8">
+        <h3 class="font-bold text-[var(--very-dark-blue)] text-lg sm:text-xl md:text-2xl md:mb-4">Frequently Asked Questions</h3>
+        <p class="text-[var(--greyish-blue)]">
+          Here are some of our FAQs. If you have any
+          other questions you’d like answered please
+          feel free to email us.
+        </p>
+      </div>
+
+      <div class="w-[min(calc(100%-2rem),30rem)] mx-auto py-8">
+        <ul class="faq-links">
+          <li class="question">
+            <div class=" faqs ">
+              <h4 class="qes">What is Bookmark?</h4>
+              <button class="toggle-article active:translate-y-1.5">
+
+                <i class="toggle-close  fa-solid fa-chevron-up text-[var(--soft-red)] hidden"></i>
+                <i class="toggle-open fa-solid fa-chevron-down text-[var(--soft-blue)]"></i>
+
+              </button>
+            </div>
+            <div class="article-container ">
+              <p class="arti-para">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Fusce tincidunt justo eget ultricies fringilla.
+                Phasellus blandit ipsum quis quam ornare mattis.
+              </p>
+            </div>
+          </li>
+
+
+          <li class="question">
+            <div class=" faqs ">
+              <h4 class="qes">How can I request a new browser?</h4>
+              <button class="toggle-article active:translate-y-1.5">
+
+                <i class="toggle-close  fa-solid fa-chevron-up text-[var(--soft-red)] hidden"></i>
+                <i class="toggle-open fa-solid fa-chevron-down text-[var(--soft-blue)]"></i>
+
+              </button>
+            </div>
+            <div class="article-container ">
+              <p class="arti-para">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              </p>
+            </div>
+          </li>
+          <li class="question">
+            <div class=" faqs  ">
+              <h4 class="qes">Is there a mobile app?</h4>
+
+              <button class="toggle-article active:translate-y-1.5">
+                <i class="toggle-close  fa-solid fa-chevron-up text-[var(--soft-red)] hidden"></i>
+                <i class="toggle-open fa-solid fa-chevron-down text-[var(--soft-blue)]"></i>
+              </button>
+            </div>
+            <div class="article-container ">
+              <p class="arti-para">
+                Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+                urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                sollicitudin ex et ultricies bibendum.
+              </p>
+            </div>
+          </li>
+          <li class="question">
+            <div class=" faqs ">
+              <h4 class="qes">What about other Chromium browsers?</h4>
+              <button class="toggle-article active:translate-y-1.5">
+
+                <i class="toggle-close  fa-solid fa-chevron-up text-[var(--soft-red)] "></i>
+                <i class="toggle-open  fa-solid fa-chevron-down text-[var(--soft-blue)]"></i>
+
+              </button>
+            </div>
+            <div class="article-container ">
+              <p class="arti-para">
+                Integer condimentum ipsum id imperdiet finibus.
+                Vivamus in placerat mi, at euismod dui. Aliquam
+                vitae neque eget nisl gravida pellentesque non ut velit.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center">
+        <button class=" w-[7rem]  blue-btn">More Info</button>
+      </div>
+    </section>
+
+    <!-- Pre footer section -->
+    <section class="mt-18 bg-[var(--soft-blue)] py-12">
+      <div class="text-center text-white mb-8">
+        <h5 class="uppercase tracking-widest text-sm mb-4 md:text-lg">35.000+ already Joined</h5>
+        <h5 class="font-medium text-xl tracking-wide md:text-3xl">Stay up-to-date with what </h5>
+        <h5 class="font-medium text-xl tracking-wide md:text-3xl">we’re doing</h5>
+      </div>
+      <div>
+        <form>
+          <div class="flex flex-col md:flex-row  justify-center gap-4">
+            <div class=" relative w-[min(calc(100%-2rem),20rem)]  mx-auto md:mx-0">
+              <input
+                class="user-email bg-white w-full  px-4 py-2 outline-0 rounded-sm placeholder:text-[var(--greyish-blue)] placeholder:text-sm"
+                type="email" placeholder="Enter your email address" name="user-email" id="user-email">
+              <div class=" absolute hidden  -bottom-5 input-error w-full bg-[var(--soft-red)] h-[1.5rem]  px-2 p-1">
+                <p class="text-white text-xs italic font-medium">Whoops, make sure it's an email</p>
+              </div>
+            </div>
+            <button
+              class=" submit-btn cursor-pointer bg-[var(--soft-red)]  w-[min(calc(100%-2rem),20rem)] md:w-[min(calc(100%-2rem),10rem)] rounded-sm  mx-auto md:mx-0 py-2 px-4 text-white font-medium hover:bg-white hover:text-[var(--soft-red)] hover:border-[var(--soft-red)]  border-solid border-2 border-transparent transition duration-300 ease-in-out">
+              Contact Us
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[var(--very-dark-blue)]  py-8 relative">
+    <div class="w-[calc(100%-10%)] mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0 flex flex-col md:flex-row  items-center gap-4 md:gap-8  min-w-[80%]">
+        <a href="#">
+          <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <path
+                d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                fill="#ffff" fill-rule="nonzero" />
+              <g>
+                <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+                <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF" />
+              </g>
+            </g>
+          </svg>
+        </a>
+        <ul class=" foot-links flex flex-col md:flex-row  items-center  w-full justify-between max-w-[20rem]">
+
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex gap-8 social-links ">
+        <a href="#">
+          <i class='bx bxl-facebook-square  text-3xl'></i>
+        </a>
+        <a href="#">
+          <i class='bx bxl-twitter  text-3xl'></i>
+        </a>
+      </div>
+    </div>
+
+    <p class="attribution absolute font-medium text-violet-400 bottom-0 left-0 right-0 m-auto">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a class="text-white font-bold tracking-wider" href="#">Rodney Takunda Madondo</a>.
+    </p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
 </body>
 
-</html>
+</htm>
