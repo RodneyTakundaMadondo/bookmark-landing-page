@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/RodneyTakundaMadondo/bookmark-landing-page.git)
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL: (https://rodneytakundamadondo.github.io/bookmark-landing-page/)
 
 ## My process
 
